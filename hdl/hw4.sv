@@ -4,6 +4,5 @@ module find_max(
     input wire [2:0] c, 
     output wire [2:0] max
 );
-
-wire [2:0] max1 = (a > b) ? a : b;
-assign max = (max1 > c) ? max1 : c;
+    assign max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+endmodule

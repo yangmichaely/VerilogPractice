@@ -5,4 +5,4 @@ module queue(
     output queue_full,
     output queue_empty
 );
-
+endmodule
