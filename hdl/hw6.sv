@@ -152,7 +152,6 @@ module average(
 	always @(posedge clk) begin
 		case(state)
 			sum: begin
-				$display("ans = %d, in = %d, countr = %d", ans, in, counter);
 				temp = ans + in;
 				if(temp < ans || temp < in) begin
 					overflowBit = 1;
