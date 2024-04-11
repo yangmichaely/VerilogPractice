@@ -26,7 +26,6 @@ module queue(
         else begin
             if(size > 0) begin
                 deqOut = queue[0];
-                $display("Dequeued %d", deqOut);
                 for (int i = 0; i < size - 1; i = i + 1) begin
                     queue[i] = queue[i + 1];
                 end
