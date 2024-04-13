@@ -9,7 +9,7 @@ run:
 
 diff:
 	diff hw4_expected_display.text hw4_out_display.text
-#diff hw6q1_expected_display.text hw6q1_out_display.text
+	diff hw6q1_expected_display.text hw6q1_out_display.text
 	diff hw6q2_expected_display.text hw6q2_out_display.text
 	diff hw6q3_expected_display.text hw6q3_out_display.text
 	diff hw6q4_expected_display.text hw6q4_out_display.text

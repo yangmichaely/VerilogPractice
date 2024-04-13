@@ -18,33 +18,18 @@ module divider(
 	assign quotient = q;
 	assign remainder = temp_dividend;
 
+	always @(dividend, divisor) begin
+		i <= 0;
+		q <= 0;
+		temp_dividend <= dividend;
+	end
+
 	always @(posedge clk) begin
-		case(state)
-			init: begin
-				temp_dividend <= 0;
-				q <= 0;
-				i <= 0;
-				state = shift;
-			end
-			shift: begin
-				if(temp_dividend >= divisor) begin
-					temp_dividend <= temp_dividend - divisor;
-					q <= q + 1;
-				end
-				else if(i > 31) begin
-					state <= store;
-				end
-				else if (temp_dividend < divisor && i < 32) begin
-					temp_dividend[31:0] <= {temp_dividend[30:0], dividend[31 - i]};
-					q[31:0] <= {q[30:0], 1'b0};
-					i <= i + 1;
-					state <= shift;
-				end
-			end
-			store: begin
-				state <= store;
-			end
-		endcase
+		if(i < 32 && (divisor << i) >= divisor && temp_dividend >= (divisor << i)) begin
+			temp_dividend <= temp_dividend - (divisor << i);
+			q <= q + (1 << i);
+		end
+		i <= i + 1;
 	end
 endmodule
 
