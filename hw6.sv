@@ -125,21 +125,26 @@ module average(
 				state = sum;
 			end
 			sum: begin
-				temp = ans + in;
-				if(temp < ans || temp < in) begin
-					overflowBit = 1;
-					ans = 0;
-					state = store;
-				end
-				ans = temp;
-				if(counter >= 5) begin
-					state = store;
-				end
 				counter = counter + 1;
+				if(counter >= 7) begin
+					readyBit = 1;
+					state = store;
+				end
+				else begin
+					temp = ans + in;
+					if(temp < ans || temp < in) begin
+						overflowBit = 1;
+						ans = 0;
+						readyBit = 1;
+						state = store;
+					end
+					else begin
+						ans = temp;
+					end
+				end
 			end
 			store: begin
-				readyBit = 1;
-				state = init;
+				state = store;
 			end
 		endcase
 	end

@@ -108,13 +108,16 @@ initial begin
 end
 
 initial begin
+    
+
     // Test 1:
     numerator = 9;
     denominator = 2;
     expected_quotient = 4;
     expected_remainder = 1;
+
+
     // Test 2:
-    #640
     numerator = 30;
     denominator = 4;
     expected_quotient = 7;
