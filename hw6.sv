@@ -63,8 +63,8 @@ endmodule
 
 module factorial(
 	input wire [31:0] val,
-	input clk,
 	output wire[31:0] factorial,
+	input clk,
 	output ready,
 	output overflow
 );
