@@ -113,8 +113,8 @@ initial begin
     denominator = 2;
     expected_quotient = 4;
     expected_remainder = 1;
-    #640 // wait 32 cycles
     // Test 2:
+    #640
     numerator = 30;
     denominator = 4;
     expected_quotient = 7;

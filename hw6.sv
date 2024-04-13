@@ -8,50 +8,44 @@ module divider(
 
 	parameter init = 2'b00;
 	parameter shift = 2'b01;
-	parameter subtract = 2'b10;
-	parameter store = 2'b11;
+	parameter store = 2'b10;
 
 	reg [31:0] q;
 	reg [31:0] temp_dividend;
 	reg [31:0] i;
 	reg [1:0] state = init;
 
+	assign quotient = q;
+	assign remainder = temp_dividend;
+
 	always @(posedge clk) begin
 		case(state)
 			init: begin
-				temp_dividend = 0;
-				q = 0;
-				i = 0;
+				temp_dividend <= 0;
+				q <= 0;
+				i <= 0;
 				state = shift;
 			end
 			shift: begin
 				if(temp_dividend >= divisor) begin
-					state = subtract;
+					temp_dividend <= temp_dividend - divisor;
+					q <= q + 1;
 				end
 				else if(i > 31) begin
-					state = store;
+					state <= store;
 				end
 				else if (temp_dividend < divisor && i < 32) begin
-					temp_dividend[31:0] = {temp_dividend[30:0], dividend[31 - i]};
-					q[31:0] = {q[30:0], 1'b0};
-					state = shift;
-					i = i + 1;
+					temp_dividend[31:0] <= {temp_dividend[30:0], dividend[31 - i]};
+					q[31:0] <= {q[30:0], 1'b0};
+					i <= i + 1;
+					state <= shift;
 				end
 			end
-			subtract: begin
-				temp_dividend = temp_dividend - divisor;
-				q = q + 1;
-				state = shift;
-			end
 			store: begin
-				state = store;
+				state <= store;
 			end
 		endcase
 	end
-
-	assign quotient = q;
-	assign remainder = temp_dividend;
-
 endmodule
 
 module factorial(
