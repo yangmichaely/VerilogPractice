@@ -1,0 +1,2550 @@
+$date
+	Fri Apr 12 23:16:03 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module hw4_tb $end
+$var wire 3 ! out [2:0] $end
+$var reg 3 " a [2:0] $end
+$var reg 3 # b [2:0] $end
+$var reg 3 $ c [2:0] $end
+$var reg 1 % clk $end
+$var reg 3 & expected [2:0] $end
+$var integer 32 ' test_num [31:0] $end
+$scope module my_max $end
+$var wire 3 ( a [2:0] $end
+$var wire 3 ) b [2:0] $end
+$var wire 3 * c [2:0] $end
+$var wire 3 + max [2:0] $end
+$var wire 3 , maxVal [2:0] $end
+$var reg 3 - ans [2:0] $end
+$upscope $end
+$scope begin $unm_blk_4 $end
+$var integer 32 . expected_file [31:0] $end
+$var integer 32 / out_file [31:0] $end
+$upscope $end
+$scope begin $unm_blk_5 $end
+$var integer 32 0 expected_file [31:0] $end
+$var integer 32 1 out_file [31:0] $end
+$upscope $end
+$upscope $end
+$scope module hw6q1_tb $end
+$var wire 32 2 remainder [31:0] $end
+$var wire 32 3 quotient [31:0] $end
+$var reg 1 4 clk $end
+$var reg 9 5 cycle_counter [8:0] $end
+$var reg 32 6 denominator [31:0] $end
+$var reg 32 7 expected_quotient [31:0] $end
+$var reg 32 8 expected_remainder [31:0] $end
+$var reg 32 9 numerator [31:0] $end
+$scope module my_divider $end
+$var wire 1 4 clk $end
+$var wire 32 : dividend [31:0] $end
+$var wire 32 ; divisor [31:0] $end
+$var wire 32 < quotient [31:0] $end
+$var wire 32 = remainder [31:0] $end
+$var reg 32 > i [31:0] $end
+$var reg 32 ? q [31:0] $end
+$var reg 2 @ state [1:0] $end
+$var reg 32 A temp_dividend [31:0] $end
+$upscope $end
+$scope begin $unm_blk_12 $end
+$var integer 32 B debug_file [31:0] $end
+$var integer 32 C expected_file [31:0] $end
+$var integer 32 D out_file [31:0] $end
+$upscope $end
+$upscope $end
+$scope module hw6q2_tb $end
+$var wire 1 E ready $end
+$var wire 1 F overflow $end
+$var wire 32 G fact [31:0] $end
+$var reg 1 H clk $end
+$var reg 9 I cycle_counter [8:0] $end
+$var reg 32 J expected_fact [31:0] $end
+$var reg 1 K expected_overflow $end
+$var reg 32 L val [31:0] $end
+$scope module my_fact $end
+$var wire 1 H clk $end
+$var wire 32 M val [31:0] $end
+$var wire 1 E ready $end
+$var wire 1 F overflow $end
+$var wire 32 N factorial [31:0] $end
+$var reg 32 O ans [31:0] $end
+$var reg 32 P counter [31:0] $end
+$var reg 1 Q overflowBit $end
+$var reg 1 R readyBit $end
+$var reg 2 S state [1:0] $end
+$upscope $end
+$scope begin $unm_blk_19 $end
+$var integer 32 T expected_file [31:0] $end
+$var integer 32 U out_file [31:0] $end
+$upscope $end
+$scope begin $unm_blk_20 $end
+$var integer 32 V debug_file [31:0] $end
+$var integer 32 W expected_file [31:0] $end
+$var integer 32 X out_file [31:0] $end
+$upscope $end
+$upscope $end
+$scope module hw6q3tb $end
+$var wire 1 Y ready $end
+$var wire 1 Z overflow $end
+$var wire 32 [ avg [31:0] $end
+$var reg 1 \ clk $end
+$var reg 9 ] cycle_counter [8:0] $end
+$var reg 32 ^ expected_avg [31:0] $end
+$var reg 1 _ expected_overflow $end
+$var reg 32 ` in [31:0] $end
+$var reg 32 a input_1 [31:0] $end
+$var reg 32 b input_2 [31:0] $end
+$var reg 32 c input_3 [31:0] $end
+$var reg 32 d input_4 [31:0] $end
+$var reg 32 e input_5 [31:0] $end
+$var reg 32 f input_6 [31:0] $end
+$scope module my_avg $end
+$var wire 1 \ clk $end
+$var wire 32 g in [31:0] $end
+$var wire 1 Z overflow $end
+$var wire 1 Y ready $end
+$var wire 32 h avg [31:0] $end
+$var reg 32 i ans [31:0] $end
+$var reg 32 j counter [31:0] $end
+$var reg 1 k overflowBit $end
+$var reg 1 l readyBit $end
+$var reg 1 m state $end
+$var reg 32 n temp [31:0] $end
+$upscope $end
+$scope begin $unm_blk_27 $end
+$var integer 32 o expected_file [31:0] $end
+$var integer 32 p out_file [31:0] $end
+$upscope $end
+$scope begin $unm_blk_28 $end
+$var integer 32 q debug_file [31:0] $end
+$var integer 32 r expected_file [31:0] $end
+$var integer 32 s out_file [31:0] $end
+$upscope $end
+$upscope $end
+$scope module hw6q4tb $end
+$var wire 32 t running_sum [31:0] $end
+$var reg 1 u clk $end
+$var reg 32 v expected_sum [31:0] $end
+$var reg 32 w stream_1 [31:0] $end
+$var reg 32 x stream_2 [31:0] $end
+$scope module my_stream $end
+$var wire 1 u clk $end
+$var wire 32 y first_stream [31:0] $end
+$var wire 32 z running_sum [31:0] $end
+$var wire 32 { second_stream [31:0] $end
+$var reg 32 | sum [31:0] $end
+$upscope $end
+$scope begin $unm_blk_35 $end
+$var integer 32 } expected_file [31:0] $end
+$var integer 32 ~ out_file [31:0] $end
+$upscope $end
+$scope begin $unm_blk_36 $end
+$var integer 32 !" debug_file [31:0] $end
+$var integer 32 "" expected_file [31:0] $end
+$var integer 32 #" out_file [31:0] $end
+$upscope $end
+$upscope $end
+$scope module queue $end
+$var wire 1 $" clk $end
+$var wire 32 %" in [31:0] $end
+$var wire 32 &" out [31:0] $end
+$var wire 1 '" queue_empty $end
+$var wire 1 (" queue_full $end
+$var wire 1 )" signal $end
+$var reg 32 *" deqOut [31:0] $end
+$var reg 1 +" empty $end
+$var reg 1 ," full $end
+$var integer 32 -" size [31:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 ." i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module hw4_tb $end
+$scope module my_max $end
+$upscope $end
+$scope begin $unm_blk_4 $end
+$upscope $end
+$scope begin $unm_blk_5 $end
+$upscope $end
+$upscope $end
+$scope module hw6q1_tb $end
+$scope module my_divider $end
+$upscope $end
+$scope begin $unm_blk_12 $end
+$upscope $end
+$upscope $end
+$scope module hw6q2_tb $end
+$scope module my_fact $end
+$upscope $end
+$scope begin $unm_blk_19 $end
+$upscope $end
+$scope begin $unm_blk_20 $end
+$upscope $end
+$upscope $end
+$scope module hw6q3tb $end
+$scope module my_avg $end
+$upscope $end
+$scope begin $unm_blk_27 $end
+$upscope $end
+$scope begin $unm_blk_28 $end
+$upscope $end
+$upscope $end
+$scope module hw6q4tb $end
+$scope module my_stream $end
+$upscope $end
+$scope begin $unm_blk_35 $end
+$upscope $end
+$scope begin $unm_blk_36 $end
+$upscope $end
+$upscope $end
+$scope module queue $end
+$scope begin $ivl_for_loop0 $end
+$upscope $end
+$upscope $end
+$scope module hw4_tb $end
+$scope module my_max $end
+$upscope $end
+$scope begin $unm_blk_4 $end
+$upscope $end
+$scope begin $unm_blk_5 $end
+$upscope $end
+$upscope $end
+$scope module hw6q1_tb $end
+$scope module my_divider $end
+$upscope $end
+$scope begin $unm_blk_12 $end
+$upscope $end
+$upscope $end
+$scope module hw6q2_tb $end
+$scope module my_fact $end
+$upscope $end
+$scope begin $unm_blk_19 $end
+$upscope $end
+$scope begin $unm_blk_20 $end
+$upscope $end
+$upscope $end
+$scope module hw6q3tb $end
+$scope module my_avg $end
+$upscope $end
+$scope begin $unm_blk_27 $end
+$upscope $end
+$scope begin $unm_blk_28 $end
+$upscope $end
+$upscope $end
+$scope module hw6q4tb $end
+$scope module my_stream $end
+$upscope $end
+$scope begin $unm_blk_35 $end
+$upscope $end
+$scope begin $unm_blk_36 $end
+$upscope $end
+$upscope $end
+$scope module queue $end
+$scope begin $ivl_for_loop0 $end
+$upscope $end
+$upscope $end
+$scope module hw4_tb $end
+$scope module my_max $end
+$upscope $end
+$scope begin $unm_blk_4 $end
+$upscope $end
+$scope begin $unm_blk_5 $end
+$upscope $end
+$upscope $end
+$scope module hw6q1_tb $end
+$scope module my_divider $end
+$upscope $end
+$scope begin $unm_blk_12 $end
+$upscope $end
+$upscope $end
+$scope module hw6q2_tb $end
+$scope module my_fact $end
+$upscope $end
+$scope begin $unm_blk_19 $end
+$upscope $end
+$scope begin $unm_blk_20 $end
+$upscope $end
+$upscope $end
+$scope module hw6q3tb $end
+$scope module my_avg $end
+$upscope $end
+$scope begin $unm_blk_27 $end
+$upscope $end
+$scope begin $unm_blk_28 $end
+$upscope $end
+$upscope $end
+$scope module hw6q4tb $end
+$scope module my_stream $end
+$upscope $end
+$scope begin $unm_blk_35 $end
+$upscope $end
+$scope begin $unm_blk_36 $end
+$upscope $end
+$upscope $end
+$scope module queue $end
+$scope begin $ivl_for_loop0 $end
+$upscope $end
+$upscope $end
+$scope module hw4_tb $end
+$scope module my_max $end
+$upscope $end
+$scope begin $unm_blk_4 $end
+$upscope $end
+$scope begin $unm_blk_5 $end
+$upscope $end
+$upscope $end
+$scope module hw6q1_tb $end
+$scope module my_divider $end
+$upscope $end
+$scope begin $unm_blk_12 $end
+$upscope $end
+$upscope $end
+$scope module hw6q2_tb $end
+$scope module my_fact $end
+$upscope $end
+$scope begin $unm_blk_19 $end
+$upscope $end
+$scope begin $unm_blk_20 $end
+$upscope $end
+$upscope $end
+$scope module hw6q3tb $end
+$scope module my_avg $end
+$upscope $end
+$scope begin $unm_blk_27 $end
+$upscope $end
+$scope begin $unm_blk_28 $end
+$upscope $end
+$upscope $end
+$scope module hw6q4tb $end
+$scope module my_stream $end
+$upscope $end
+$scope begin $unm_blk_35 $end
+$upscope $end
+$scope begin $unm_blk_36 $end
+$upscope $end
+$upscope $end
+$scope module queue $end
+$scope begin $ivl_for_loop0 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 ."
+b0 -"
+0,"
+1+"
+bx *"
+z)"
+0("
+1'"
+bx &"
+bz %"
+z$"
+b100000000000000000000 #"
+b1000000000000000000000 ""
+b10000000000000000000000 !"
+b1000000000000000000 ~
+b10000000000000000000 }
+b0 |
+b100 {
+b0 z
+b10 y
+b100 x
+b10 w
+b110 v
+0u
+b0 t
+b1000000000000000 s
+b10000000000000000 r
+b100000000000000000 q
+b10000000000000 p
+b100000000000000 o
+b0 n
+0m
+0l
+0k
+b0 j
+b0 i
+b0 h
+b0 g
+b1100 f
+b1010 e
+b1000 d
+b110 c
+b100 b
+b10 a
+b0 `
+0_
+b0 ^
+b0 ]
+0\
+b0 [
+0Z
+0Y
+b10000000000 X
+b100000000000 W
+b1000000000000 V
+b100000000 U
+b1000000000 T
+b0 S
+0R
+0Q
+bx P
+b1 O
+b1 N
+b101 M
+b101 L
+0K
+b1111000 J
+b0 I
+0H
+b1 G
+0F
+0E
+b100000 D
+b1000000 C
+b10000000 B
+bx A
+b0 @
+bx ?
+bx >
+bx =
+bx <
+b10 ;
+b1001 :
+b1001 9
+b1 8
+b100 7
+b10 6
+b0 5
+04
+bx 3
+bx 2
+b1000 1
+b10000 0
+b10 /
+b100 .
+b100 -
+b101 ,
+b100 +
+b1 *
+b100 )
+b101 (
+b1 '
+b100 &
+0%
+b1 $
+b100 #
+b101 "
+b100 !
+$end
+#5
+b110 t
+b110 z
+b110 |
+b1 ]
+b1 I
+b1 5
+b1 j
+b1 S
+b101 P
+b1 @
+b0 >
+b0 3
+b0 <
+b0 ?
+b0 2
+b0 =
+b0 A
+1u
+1\
+1H
+14
+1%
+#10
+b10 !
+b10 +
+b10 -
+b11 ,
+0u
+0\
+0H
+04
+0%
+b1110 v
+b101 x
+b101 {
+b11 w
+b11 y
+b10 `
+b10 g
+b10 &
+b0 $
+b0 *
+b11 #
+b11 )
+b10 "
+b10 (
+b10 '
+#15
+b1110 t
+b1110 z
+b1110 |
+b10 ]
+b10 I
+b10 5
+b101 G
+b101 N
+b10 j
+b10 i
+b10 n
+b100 P
+b101 O
+b1 >
+1u
+1\
+1H
+14
+1%
+#20
+0u
+0\
+0H
+04
+0%
+b11000 v
+b110 x
+b110 {
+b100 w
+b100 y
+b100 `
+b100 g
+#25
+b11000 t
+b11000 z
+b11000 |
+b11 ]
+b11 I
+b11 5
+b10100 G
+b10100 N
+b11 j
+b1 [
+b1 h
+b110 i
+b110 n
+b11 P
+b10100 O
+b10 >
+1u
+1\
+1H
+14
+1%
+#30
+0u
+0\
+0H
+04
+0%
+b0 x
+b0 {
+b0 w
+b0 y
+b110 `
+b110 g
+#35
+b100 ]
+b100 I
+b100 5
+b111100 G
+b111100 N
+b100 j
+b10 [
+b10 h
+b1100 i
+b1100 n
+b10 P
+b111100 O
+b11 >
+1u
+1\
+1H
+14
+1%
+#40
+0u
+0\
+0H
+04
+0%
+b1000 `
+b1000 g
+#45
+b101 ]
+b101 I
+b101 5
+b1111000 G
+b1111000 N
+b101 j
+b11 [
+b11 h
+b10100 i
+b10100 n
+b10 S
+b1 P
+b1111000 O
+b100 >
+1u
+1\
+1H
+14
+1%
+#50
+0u
+0\
+0H
+04
+0%
+b1010 `
+b1010 g
+#55
+b110 ]
+b110 I
+b110 5
+1E
+b110 j
+1m
+1Y
+1l
+b101 [
+b101 h
+b11110 i
+b11110 n
+1R
+b101 >
+1u
+1\
+1H
+14
+1%
+#60
+0u
+0\
+0H
+04
+0%
+b111 ^
+b1100 `
+b1100 g
+#65
+b111 ]
+b111 I
+b111 5
+b110 >
+1u
+1\
+1H
+14
+1%
+#70
+0u
+0\
+0H
+04
+0%
+b10000000000000000000000000000000 `
+b10000000000000000000000000000000 g
+b10000000000000000000000000000000 f
+b10000000000000000000000000000000 e
+b10000000000000000000000000000000 d
+b10000000000000000000000000000000 c
+b10000000000000000000000000000000 b
+b10000000000000000000000000000000 a
+#75
+b1000 ]
+b1000 I
+b1000 5
+b111 >
+1u
+1\
+1H
+14
+1%
+#80
+0u
+0\
+0H
+04
+0%
+#85
+b1001 ]
+b1001 I
+b1001 5
+b1000 >
+1u
+1\
+1H
+14
+1%
+#90
+0u
+0\
+0H
+04
+0%
+#95
+b1010 ]
+b1010 I
+b1010 5
+b1001 >
+1u
+1\
+1H
+14
+1%
+#100
+1F
+b0 G
+b0 N
+0u
+0\
+0H
+04
+0%
+1K
+b0 J
+b110010 L
+b110010 M
+#105
+b1011 ]
+b1011 I
+b1011 5
+b1010 >
+1u
+1\
+1H
+14
+1%
+#110
+0u
+0\
+0H
+04
+0%
+#115
+b1100 ]
+b1100 I
+b1100 5
+b1011 >
+1u
+1\
+1H
+14
+1%
+#120
+0u
+0\
+0H
+04
+0%
+1_
+b0 ^
+#125
+b1101 ]
+b1101 I
+b1101 5
+b1100 >
+1u
+1\
+1H
+14
+1%
+#130
+0u
+0\
+0H
+04
+0%
+#135
+b1110 ]
+b1110 I
+b1110 5
+b1101 >
+1u
+1\
+1H
+14
+1%
+#140
+0u
+0\
+0H
+04
+0%
+#145
+b1111 ]
+b1111 I
+b1111 5
+b1110 >
+1u
+1\
+1H
+14
+1%
+#150
+0u
+0\
+0H
+04
+0%
+#155
+b10000 ]
+b10000 I
+b10000 5
+b1111 >
+1u
+1\
+1H
+14
+1%
+#160
+0u
+0\
+0H
+04
+0%
+#165
+b10001 ]
+b10001 I
+b10001 5
+b10000 >
+1u
+1\
+1H
+14
+1%
+#170
+0u
+0\
+0H
+04
+0%
+#175
+b10010 ]
+b10010 I
+b10010 5
+b10001 >
+1u
+1\
+1H
+14
+1%
+#180
+0u
+0\
+0H
+04
+0%
+#185
+b10011 ]
+b10011 I
+b10011 5
+b10010 >
+1u
+1\
+1H
+14
+1%
+#190
+0u
+0\
+0H
+04
+0%
+#195
+b10100 ]
+b10100 I
+b10100 5
+b10011 >
+1u
+1\
+1H
+14
+1%
+#200
+0u
+0\
+0H
+04
+0%
+#205
+b10101 ]
+b10101 I
+b10101 5
+b10100 >
+1u
+1\
+1H
+14
+1%
+#210
+0u
+0\
+0H
+04
+0%
+#215
+b10110 ]
+b10110 I
+b10110 5
+b10101 >
+1u
+1\
+1H
+14
+1%
+#220
+0u
+0\
+0H
+04
+0%
+#225
+b10111 ]
+b10111 I
+b10111 5
+b10110 >
+1u
+1\
+1H
+14
+1%
+#230
+0u
+0\
+0H
+04
+0%
+#235
+b11000 ]
+b11000 I
+b11000 5
+b10111 >
+1u
+1\
+1H
+14
+1%
+#240
+0u
+0\
+0H
+04
+0%
+#245
+b11001 ]
+b11001 I
+b11001 5
+b11000 >
+1u
+1\
+1H
+14
+1%
+#250
+0u
+0\
+0H
+04
+0%
+#255
+b11010 ]
+b11010 I
+b11010 5
+b11001 >
+1u
+1\
+1H
+14
+1%
+#260
+0u
+0\
+0H
+04
+0%
+#265
+b11011 ]
+b11011 I
+b11011 5
+b11010 >
+1u
+1\
+1H
+14
+1%
+#270
+0u
+0\
+0H
+04
+0%
+#275
+b11100 ]
+b11100 I
+b11100 5
+b11011 >
+1u
+1\
+1H
+14
+1%
+#280
+0u
+0\
+0H
+04
+0%
+#285
+b11101 ]
+b11101 I
+b11101 5
+b11100 >
+1u
+1\
+1H
+14
+1%
+#290
+0u
+0\
+0H
+04
+0%
+#295
+b11110 ]
+b11110 I
+b11110 5
+b11101 >
+b1 2
+b1 =
+b1 A
+1u
+1\
+1H
+14
+1%
+#300
+0u
+0\
+0H
+04
+0%
+#305
+b11111 ]
+b11111 I
+b11111 5
+b11110 >
+b10 2
+b10 =
+b10 A
+1u
+1\
+1H
+14
+1%
+#310
+0u
+0\
+0H
+04
+0%
+#315
+b100000 ]
+b100000 I
+b100000 5
+b10 @
+1u
+1\
+1H
+14
+1%
+#320
+0u
+0\
+0H
+04
+0%
+#325
+b100001 ]
+b100001 I
+b100001 5
+b1 @
+b1 3
+b1 <
+b1 ?
+b0 2
+b0 =
+b0 A
+1u
+1\
+1H
+14
+1%
+#330
+0u
+0\
+0H
+04
+0%
+#335
+b100010 ]
+b100010 I
+b100010 5
+b11111 >
+b10 3
+b10 <
+b10 ?
+1u
+1\
+1H
+14
+1%
+#340
+0u
+0\
+0H
+04
+0%
+#345
+b100011 ]
+b100011 I
+b100011 5
+b100000 >
+b100 3
+b100 <
+b100 ?
+b1 2
+b1 =
+b1 A
+1u
+1\
+1H
+14
+1%
+#350
+0u
+0\
+0H
+04
+0%
+#355
+b100100 ]
+b100100 I
+b100100 5
+b11 @
+1u
+1\
+1H
+14
+1%
+#360
+0u
+0\
+0H
+04
+0%
+#365
+b100101 ]
+b100101 I
+b100101 5
+1u
+1\
+1H
+14
+1%
+#370
+0u
+0\
+0H
+04
+0%
+#375
+b100110 ]
+b100110 I
+b100110 5
+1u
+1\
+1H
+14
+1%
+#380
+0u
+0\
+0H
+04
+0%
+#385
+b100111 ]
+b100111 I
+b100111 5
+1u
+1\
+1H
+14
+1%
+#390
+0u
+0\
+0H
+04
+0%
+#395
+b101000 ]
+b101000 I
+b101000 5
+1u
+1\
+1H
+14
+1%
+#400
+0u
+0\
+0H
+04
+0%
+#405
+b101001 ]
+b101001 I
+b101001 5
+1u
+1\
+1H
+14
+1%
+#410
+0u
+0\
+0H
+04
+0%
+#415
+b101010 ]
+b101010 I
+b101010 5
+1u
+1\
+1H
+14
+1%
+#420
+0u
+0\
+0H
+04
+0%
+#425
+b101011 ]
+b101011 I
+b101011 5
+1u
+1\
+1H
+14
+1%
+#430
+0u
+0\
+0H
+04
+0%
+#435
+b101100 ]
+b101100 I
+b101100 5
+1u
+1\
+1H
+14
+1%
+#440
+0u
+0\
+0H
+04
+0%
+#445
+b101101 ]
+b101101 I
+b101101 5
+1u
+1\
+1H
+14
+1%
+#450
+0u
+0\
+0H
+04
+0%
+#455
+b101110 ]
+b101110 I
+b101110 5
+1u
+1\
+1H
+14
+1%
+#460
+0u
+0\
+0H
+04
+0%
+#465
+b101111 ]
+b101111 I
+b101111 5
+1u
+1\
+1H
+14
+1%
+#470
+0u
+0\
+0H
+04
+0%
+#475
+b110000 ]
+b110000 I
+b110000 5
+1u
+1\
+1H
+14
+1%
+#480
+0u
+0\
+0H
+04
+0%
+#485
+b110001 ]
+b110001 I
+b110001 5
+1u
+1\
+1H
+14
+1%
+#490
+0u
+0\
+0H
+04
+0%
+#495
+b110010 ]
+b110010 I
+b110010 5
+1u
+1\
+1H
+14
+1%
+#500
+0u
+0\
+0H
+04
+0%
+#505
+b110011 ]
+b110011 I
+b110011 5
+1u
+1\
+1H
+14
+1%
+#510
+0u
+0\
+0H
+04
+0%
+#515
+b110100 ]
+b110100 I
+b110100 5
+1u
+1\
+1H
+14
+1%
+#520
+0u
+0\
+0H
+04
+0%
+#525
+b110101 ]
+b110101 I
+b110101 5
+1u
+1\
+1H
+14
+1%
+#530
+0u
+0\
+0H
+04
+0%
+#535
+b110110 ]
+b110110 I
+b110110 5
+1u
+1\
+1H
+14
+1%
+#540
+0u
+0\
+0H
+04
+0%
+#545
+b110111 ]
+b110111 I
+b110111 5
+1u
+1\
+1H
+14
+1%
+#550
+0u
+0\
+0H
+04
+0%
+#555
+b111000 ]
+b111000 I
+b111000 5
+1u
+1\
+1H
+14
+1%
+#560
+0u
+0\
+0H
+04
+0%
+#565
+b111001 ]
+b111001 I
+b111001 5
+1u
+1\
+1H
+14
+1%
+#570
+0u
+0\
+0H
+04
+0%
+#575
+b111010 ]
+b111010 I
+b111010 5
+1u
+1\
+1H
+14
+1%
+#580
+0u
+0\
+0H
+04
+0%
+#585
+b111011 ]
+b111011 I
+b111011 5
+1u
+1\
+1H
+14
+1%
+#590
+0u
+0\
+0H
+04
+0%
+#595
+b111100 ]
+b111100 I
+b111100 5
+1u
+1\
+1H
+14
+1%
+#600
+0u
+0\
+0H
+04
+0%
+#605
+b111101 ]
+b111101 I
+b111101 5
+1u
+1\
+1H
+14
+1%
+#610
+0u
+0\
+0H
+04
+0%
+#615
+b111110 ]
+b111110 I
+b111110 5
+1u
+1\
+1H
+14
+1%
+#620
+0u
+0\
+0H
+04
+0%
+#625
+b111111 ]
+b111111 I
+b111111 5
+1u
+1\
+1H
+14
+1%
+#630
+0u
+0\
+0H
+04
+0%
+#635
+b1000000 ]
+b1000000 I
+b1000000 5
+1u
+1\
+1H
+14
+1%
+#640
+0u
+0\
+0H
+04
+0%
+b10 8
+b111 7
+b100 6
+b100 ;
+b11110 9
+b11110 :
+#645
+b1000001 ]
+b1000001 I
+b1000001 5
+1u
+1\
+1H
+14
+1%
+#650
+0u
+0\
+0H
+04
+0%
+#655
+b1000010 ]
+b1000010 I
+b1000010 5
+1u
+1\
+1H
+14
+1%
+#660
+0u
+0\
+0H
+04
+0%
+#665
+b1000011 ]
+b1000011 I
+b1000011 5
+1u
+1\
+1H
+14
+1%
+#670
+0u
+0\
+0H
+04
+0%
+#675
+b1000100 ]
+b1000100 I
+b1000100 5
+1u
+1\
+1H
+14
+1%
+#680
+0u
+0\
+0H
+04
+0%
+#685
+b1000101 ]
+b1000101 I
+b1000101 5
+1u
+1\
+1H
+14
+1%
+#690
+0u
+0\
+0H
+04
+0%
+#695
+b1000110 ]
+b1000110 I
+b1000110 5
+1u
+1\
+1H
+14
+1%
+#700
+0u
+0\
+0H
+04
+0%
+#705
+b1000111 ]
+b1000111 I
+b1000111 5
+1u
+1\
+1H
+14
+1%
+#710
+0u
+0\
+0H
+04
+0%
+#715
+b1001000 ]
+b1001000 I
+b1001000 5
+1u
+1\
+1H
+14
+1%
+#720
+0u
+0\
+0H
+04
+0%
+#725
+b1001001 ]
+b1001001 I
+b1001001 5
+1u
+1\
+1H
+14
+1%
+#730
+0u
+0\
+0H
+04
+0%
+#735
+b1001010 ]
+b1001010 I
+b1001010 5
+1u
+1\
+1H
+14
+1%
+#740
+0u
+0\
+0H
+04
+0%
+#745
+b1001011 ]
+b1001011 I
+b1001011 5
+1u
+1\
+1H
+14
+1%
+#750
+0u
+0\
+0H
+04
+0%
+#755
+b1001100 ]
+b1001100 I
+b1001100 5
+1u
+1\
+1H
+14
+1%
+#760
+0u
+0\
+0H
+04
+0%
+#765
+b1001101 ]
+b1001101 I
+b1001101 5
+1u
+1\
+1H
+14
+1%
+#770
+0u
+0\
+0H
+04
+0%
+#775
+b1001110 ]
+b1001110 I
+b1001110 5
+1u
+1\
+1H
+14
+1%
+#780
+0u
+0\
+0H
+04
+0%
+#785
+b1001111 ]
+b1001111 I
+b1001111 5
+1u
+1\
+1H
+14
+1%
+#790
+0u
+0\
+0H
+04
+0%
+#795
+b1010000 ]
+b1010000 I
+b1010000 5
+1u
+1\
+1H
+14
+1%
+#800
+0u
+0\
+0H
+04
+0%
+#805
+b1010001 ]
+b1010001 I
+b1010001 5
+1u
+1\
+1H
+14
+1%
+#810
+0u
+0\
+0H
+04
+0%
+#815
+b1010010 ]
+b1010010 I
+b1010010 5
+1u
+1\
+1H
+14
+1%
+#820
+0u
+0\
+0H
+04
+0%
+#825
+b1010011 ]
+b1010011 I
+b1010011 5
+1u
+1\
+1H
+14
+1%
+#830
+0u
+0\
+0H
+04
+0%
+#835
+b1010100 ]
+b1010100 I
+b1010100 5
+1u
+1\
+1H
+14
+1%
+#840
+0u
+0\
+0H
+04
+0%
+#845
+b1010101 ]
+b1010101 I
+b1010101 5
+1u
+1\
+1H
+14
+1%
+#850
+0u
+0\
+0H
+04
+0%
+#855
+b1010110 ]
+b1010110 I
+b1010110 5
+1u
+1\
+1H
+14
+1%
+#860
+0u
+0\
+0H
+04
+0%
+#865
+b1010111 ]
+b1010111 I
+b1010111 5
+1u
+1\
+1H
+14
+1%
+#870
+0u
+0\
+0H
+04
+0%
+#875
+b1011000 ]
+b1011000 I
+b1011000 5
+1u
+1\
+1H
+14
+1%
+#880
+0u
+0\
+0H
+04
+0%
+#885
+b1011001 ]
+b1011001 I
+b1011001 5
+1u
+1\
+1H
+14
+1%
+#890
+0u
+0\
+0H
+04
+0%
+#895
+b1011010 ]
+b1011010 I
+b1011010 5
+1u
+1\
+1H
+14
+1%
+#900
+0u
+0\
+0H
+04
+0%
+#905
+b1011011 ]
+b1011011 I
+b1011011 5
+1u
+1\
+1H
+14
+1%
+#910
+0u
+0\
+0H
+04
+0%
+#915
+b1011100 ]
+b1011100 I
+b1011100 5
+1u
+1\
+1H
+14
+1%
+#920
+0u
+0\
+0H
+04
+0%
+#925
+b1011101 ]
+b1011101 I
+b1011101 5
+1u
+1\
+1H
+14
+1%
+#930
+0u
+0\
+0H
+04
+0%
+#935
+b1011110 ]
+b1011110 I
+b1011110 5
+1u
+1\
+1H
+14
+1%
+#940
+0u
+0\
+0H
+04
+0%
+#945
+b1011111 ]
+b1011111 I
+b1011111 5
+1u
+1\
+1H
+14
+1%
+#950
+0u
+0\
+0H
+04
+0%
+#955
+b1100000 ]
+b1100000 I
+b1100000 5
+1u
+1\
+1H
+14
+1%
+#960
+0u
+0\
+0H
+04
+0%
+#965
+b1100001 ]
+b1100001 I
+b1100001 5
+1u
+1\
+1H
+14
+1%
+#970
+0u
+0\
+0H
+04
+0%
+#975
+b1100010 ]
+b1100010 I
+b1100010 5
+1u
+1\
+1H
+14
+1%
+#980
+0u
+0\
+0H
+04
+0%
+#985
+b1100011 ]
+b1100011 I
+b1100011 5
+1u
+1\
+1H
+14
+1%
+#990
+0u
+0\
+0H
+04
+0%
+#995
+b1100100 ]
+b1100100 I
+b1100100 5
+1u
+1\
+1H
+14
+1%
+#1000
+0u
+0\
+0H
+04
+0%
+#1005
+b1100101 ]
+b1100101 I
+b1100101 5
+1u
+1\
+1H
+14
+1%
+#1010
+0u
+0\
+0H
+04
+0%
+#1015
+b1100110 ]
+b1100110 I
+b1100110 5
+1u
+1\
+1H
+14
+1%
+#1020
+0u
+0\
+0H
+04
+0%
+#1025
+b1100111 ]
+b1100111 I
+b1100111 5
+1u
+1\
+1H
+14
+1%
+#1030
+0u
+0\
+0H
+04
+0%
+#1035
+b1101000 ]
+b1101000 I
+b1101000 5
+1u
+1\
+1H
+14
+1%
+#1040
+0u
+0\
+0H
+04
+0%
+#1045
+b1101001 ]
+b1101001 I
+b1101001 5
+1u
+1\
+1H
+14
+1%
+#1050
+0u
+0\
+0H
+04
+0%
+#1055
+b1101010 ]
+b1101010 I
+b1101010 5
+1u
+1\
+1H
+14
+1%
+#1060
+0u
+0\
+0H
+04
+0%
+#1065
+b1101011 ]
+b1101011 I
+b1101011 5
+1u
+1\
+1H
+14
+1%
+#1070
+0u
+0\
+0H
+04
+0%
+#1075
+b1101100 ]
+b1101100 I
+b1101100 5
+1u
+1\
+1H
+14
+1%
+#1080
+0u
+0\
+0H
+04
+0%
+#1085
+b1101101 ]
+b1101101 I
+b1101101 5
+1u
+1\
+1H
+14
+1%
+#1090
+0u
+0\
+0H
+04
+0%
+#1095
+b1101110 ]
+b1101110 I
+b1101110 5
+1u
+1\
+1H
+14
+1%
+#1100
+0u
+0\
+0H
+04
+0%
+#1105
+b1101111 ]
+b1101111 I
+b1101111 5
+1u
+1\
+1H
+14
+1%
+#1110
+0u
+0\
+0H
+04
+0%
+#1115
+b1110000 ]
+b1110000 I
+b1110000 5
+1u
+1\
+1H
+14
+1%
+#1120
+0u
+0\
+0H
+04
+0%
+#1125
+b1110001 ]
+b1110001 I
+b1110001 5
+1u
+1\
+1H
+14
+1%
+#1130
+0u
+0\
+0H
+04
+0%
+#1135
+b1110010 ]
+b1110010 I
+b1110010 5
+1u
+1\
+1H
+14
+1%
+#1140
+0u
+0\
+0H
+04
+0%
+#1145
+b1110011 ]
+b1110011 I
+b1110011 5
+1u
+1\
+1H
+14
+1%
+#1150
+0u
+0\
+0H
+04
+0%
+#1155
+b1110100 ]
+b1110100 I
+b1110100 5
+1u
+1\
+1H
+14
+1%
+#1160
+0u
+0\
+0H
+04
+0%
+#1165
+b1110101 ]
+b1110101 I
+b1110101 5
+1u
+1\
+1H
+14
+1%
+#1170
+0u
+0\
+0H
+04
+0%
+#1175
+b1110110 ]
+b1110110 I
+b1110110 5
+1u
+1\
+1H
+14
+1%
+#1180
+0u
+0\
+0H
+04
+0%
+#1185
+b1110111 ]
+b1110111 I
+b1110111 5
+1u
+1\
+1H
+14
+1%
+#1190
+0u
+0\
+0H
+04
+0%
+#1195
+b1111000 ]
+b1111000 I
+b1111000 5
+1u
+1\
+1H
+14
+1%
+#1200
+0u
+0\
+0H
+04
+0%
+#1205
+b1111001 ]
+b1111001 I
+b1111001 5
+1u
+1\
+1H
+14
+1%
+#1210
+0u
+0\
+0H
+04
+0%
+#1215
+b1111010 ]
+b1111010 I
+b1111010 5
+1u
+1\
+1H
+14
+1%
+#1220
+0u
+0\
+0H
+04
+0%
+#1225
+b1111011 ]
+b1111011 I
+b1111011 5
+1u
+1\
+1H
+14
+1%
+#1230
+0u
+0\
+0H
+04
+0%
+#1235
+b1111100 ]
+b1111100 I
+b1111100 5
+1u
+1\
+1H
+14
+1%
+#1240
+0u
+0\
+0H
+04
+0%
+#1245
+b1111101 ]
+b1111101 I
+b1111101 5
+1u
+1\
+1H
+14
+1%
+#1250
+0u
+0\
+0H
+04
+0%
+#1255
+b1111110 ]
+b1111110 I
+b1111110 5
+1u
+1\
+1H
+14
+1%
+#1260
+0u
+0\
+0H
+04
+0%
+#1265
+b1111111 ]
+b1111111 I
+b1111111 5
+1u
+1\
+1H
+14
+1%
+#1270
+0u
+0\
+0H
+04
+0%
+#1275
+b10000000 ]
+b10000000 I
+b10000000 5
+1u
+1\
+1H
+14
+1%
+#1280
+0u
+0\
+0H
+04
+0%

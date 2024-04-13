@@ -1,3 +1,5 @@
+// MASTER TESTBENCH
+
 module hw4_tb();
 // declarations
 
@@ -33,17 +35,22 @@ initial begin
     
     
 
-    // repeat(5)@(posedge clk); // wait for 5 clocks
     
     // Test 1:
-    // MODIFY THE TEST INPUTS AND EXPECTED OUTPUTS HERE
+    test_num = 1;
+    a        = 3'b101;
+    b        = 3'b100;
+    c        = 3'b001;
+    expected    = 3'b100;
     #10
-    // repeat (1) @ (posedge clk);
     
     // Test 2:
-    // MODIFY THE TEST INPUTS AND EXPECTED OUTPUTS HERE
+    test_num = 2;
+    a       = 3'b010;
+    b       = 3'b011;
+    c       = 3'b000;
+    expected = 3'b010;
     #10
-    // repeat(1) @ (posedge clk);
 
     $fclose(out_file);
     $fclose(expected_file);
@@ -101,18 +108,18 @@ initial begin
 end
 
 initial begin
-    
-    // repeat(5)@(posedge clk); // wait for 5 clocks
-    // repeat (32)  @ (posedge clk);
     // Test 1:
-    // MODIFY THE TEST INPUTS AND EXPECTED OUTPUTS HERE
-    // repeat(32) @(posedge clk); // Wait 32 cycles after changing inputs
-
-
-    // Test 2:
-    // MODIFY THE TEST INPUTS AND EXPECTED OUTPUTS HERE   
+    numerator = 9;
+    denominator = 2;
+    expected_quotient = 4;
+    expected_remainder = 1;
     #640 // wait 32 cycles
-    // repeat(32) @(posedge clk); // Wait 32 cycles after changing inputs
+    // Test 2:
+    numerator = 30;
+    denominator = 4;
+    expected_quotient = 7;
+    expected_remainder = 2;
+    #640 // wait 32 cycles
 
     $finish;
 
@@ -184,20 +191,22 @@ initial begin
     
     
 
-    // repeat(5)@(posedge clk); // wait for 5 clocks
     
     // Test 1:
-        // MODIFY THE TEST INPUTS AND EXPECTED OUTPUTS HERE
-    // repeat (1) @ (posedge clk);
+    val = 5;
+    expected_fact = 120;
+    expected_overflow = 0;
+    #100
     
     // Test 2:
-        // MODIFY THE TEST INPUTS AND EXPECTED OUTPUTS HERE
-    // repeat(1) @ (posedge clk);
+    val = 50;
+    expected_fact = 0;
+    expected_overflow = 1;
+    #100
 
     $fclose(out_file);
     $fclose(expected_file);
 
-    // $finish;
 
 
 end // initial
@@ -231,7 +240,6 @@ begin
     $fclose(debug_file);
 end //initial  
 endmodule
-
 
 module hw6q3tb();
 
@@ -279,17 +287,16 @@ initial begin
     
     in = 0;
 
-    // repeat(5)@(posedge clk); // wait for 5 clocks
     
     // Test 1:
-    input_1 = 0;
-    input_2 = 0;
-    input_3 = 0;
-    input_4 = 0;
-    input_5 = 0;
-    input_6 = 0;
+    input_1 = 2;
+    input_2 = 4;
+    input_3 = 6;
+    input_4 = 8;
+    input_5 = 10;
+    input_6 = 12;
     #10
-    in = input_1; // MODIFY THESE TEST INPUTS AND OUTPUTS
+    in = input_1;
     #10
     in = input_2;
     #10
@@ -300,18 +307,17 @@ initial begin
     in = input_5;
     #10
     in = input_6;
-    expected_avg = 0;
+    expected_avg = 7;
     expected_overflow = 0;
     #10
-    // repeat (1) @ (posedge clk);
     
     // Test 2:
-    input_1 = 0; // MODIFY THESE TEST INPUTS AND OUTPUTS
-    input_2 = 0;
-    input_3 = 0;
-    input_4 = 0;
-    input_5 = 0;
-    input_6 = 0;
+    input_1 = {1'b1, 31'b0};
+    input_2 = {1'b1, 31'b0};
+    input_3 = {1'b1, 31'b0};
+    input_4 = {1'b1, 31'b0};
+    input_5 = {1'b1, 31'b0};
+    input_6 = {1'b1, 31'b0};
     in = input_1;
     #10
     in = input_2;
@@ -324,9 +330,8 @@ initial begin
     #10
     in = input_6;
     expected_avg = 0;
-    expected_overflow = 0;
+    expected_overflow = 1;
     #10
-    // repeat(1) @ (posedge clk);
 
     $fclose(out_file);
     $fclose(expected_file);
@@ -411,18 +416,23 @@ initial begin
     integer out_file, expected_file;
     out_file = $fopen("hw6q4_out_display.text");
     expected_file = $fopen("hw6q4_expected_display.text");
-    
-    // repeat(5)@(posedge clk); // wait for 5 clocks
-    
+        
     // Test 1:
-    // ADD TEST INPUTS AND OUTPUTS HERE
+    stream_1 = 2;
+    stream_2 = 4;
+    expected_sum = 6;
     #10
-    // ADD TEST INPUTS AND OUTPUTS HERE    
+    stream_1 = 3;
+    stream_2 = 5;
+    expected_sum = 14;
     #10
-    // ADD TEST INPUTS AND OUTPUTS HERE    
+    stream_1 = 4;
+    stream_2 = 6;
+    expected_sum = 24;
     #10
     stream_1 = 0;
-    stream_2 = 0; // reset streams so expected matches actual
+    stream_2 = 0; // so expected matches actual
+
 
     $fclose(out_file);
     $fclose(expected_file);

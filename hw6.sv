@@ -14,14 +14,7 @@ module divider(
 	reg [31:0] q;
 	reg [31:0] temp_dividend;
 	reg [31:0] i;
-	reg [1:0] state;
-
-	initial begin
-		temp_dividend = 0;
-		q = 0;
-		i = 0;
-		state = init;
-	end
+	reg [1:0] state = init;
 
 	always @(posedge clk) begin
 		case(state)
@@ -74,28 +67,13 @@ module factorial(
 
 	reg [31:0] counter;
 	reg [31:0] ans = 1;
-	reg [1:0] state, nextState;
-	reg [31:0] temp = 1;
+	reg [1:0] state = init;
 	reg readyBit = 0;
 	reg overflowBit = 0;
 
-	initial begin
-		state = init;
-		nextState = multiply;
-		temp = 0;
-	end
-
-	always @(posedge clk) begin
-		case(state)
-			init: nextState = multiply;
-			multiply: nextState = (counter > 1) ? multiply : store;
-			store: nextState = store;
-		endcase
-	end
-
-	always @(posedge clk) begin
-		state = nextState;
-	end
+	assign overflow = (val > 11) ? 1 : overflowBit;
+	assign ready = (val > 11) ? 1 : readyBit;
+	assign factorial = (val > 11) ? 0 : ans;
 
 	always @(posedge clk) begin
 		case(state)
@@ -104,23 +82,24 @@ module factorial(
 				overflowBit = 0;
 				counter = val;
 				ans = 1;
+				state = multiply;
 			end
 			multiply: begin
-				temp = ans * counter;
-				if(temp < counter || temp < ans) begin
-					overflowBit = 1;
-				end
-				ans = temp;
+				ans = ans * counter;
 				counter = counter - 1;
+				if(counter > 1) begin
+					state = multiply;
+				end
+				else begin
+					state = store;
+				end
 			end
 			store: begin
 				readyBit = 1;
+				state = store;
 			end
 		endcase
 	end
-	assign factorial = ans;
-	assign ready = readyBit;
-	assign overflow = overflowBit;
 endmodule
 
 module average(
