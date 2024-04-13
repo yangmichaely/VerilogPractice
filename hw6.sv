@@ -109,40 +109,43 @@ module average(
 	output ready,
 	output overflow
 );
-	localparam sum = 1'b0;
-	localparam store = 1'b1;
+	localparam init = 2'b00;
+	localparam sum = 2'b01;
+	localparam store = 2'b10;
 
 	reg [31:0] counter;
-	reg [31:0] ans = 0;
-	reg state;
+	reg [31:0] ans;
+	reg state = init;
 	reg [31:0] temp;
-	reg readyBit = 0;
-	reg overflowBit = 0;
-
-	initial begin
-		state = sum;
-		temp = 0;
-		counter = 0;
-		readyBit = 0;
-		overflowBit = 0;
-		ans = 0;
-	end
+	reg readyBit;
+	reg overflowBit;
 
 	always @(posedge clk) begin
 		case(state)
+			init: begin
+				counter = 0;
+				ans = 0;
+				temp = 0;
+				readyBit = 0;
+				overflowBit = 0;
+				state = sum;
+			end
 			sum: begin
 				temp = ans + in;
 				if(temp < ans || temp < in) begin
 					overflowBit = 1;
+					ans = 0;
+					state = store;
 				end
 				ans = temp;
 				if(counter >= 5) begin
-					readyBit = 1;
 					state = store;
 				end
 				counter = counter + 1;
 			end
 			store: begin
+				readyBit = 1;
+				state = init;
 			end
 		endcase
 	end
@@ -161,9 +164,9 @@ module stream(
 	reg [31:0] sum = 0;
 
 	always @(posedge clk) begin
-		sum <= sum + first_stream + second_stream;
+		sum <= running_sum;
 	end
 
-	assign running_sum = sum;
+	assign running_sum = sum + first_stream + second_stream;
 
 endmodule
